@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="رافدين ديجيتال للفنادق — منصة عربية لإدارة الغرف والحجوزات والأسعار والتشغيل اليومي للفندق. نظام مستقل لكل منشأة.">
+  <meta name="theme-color" content="#0e2933">
+  <meta property="og:title" content="رافدين ديجيتال | نظام إدارة الفنادق">
+  <meta property="og:description" content="إدارة الغرف والحجوزات وعمليات الفندق في لوحة واحدة — نسخة الأعمال قيد الإطلاق.">
+  <title>رافدين ديجيتال للفنادق | إدارة أوضح، حجوزات أدق</title>
+  <style>
+  :root{--bg:#f6f7f2;--navy:#112a31;--navy2:#1b3840;--muted:#597078;--white:#fff;--lime:#d9f295;--accent:#1b6a60;--border:#dfe6e0;--s:#eaf5ee}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--navy);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;line-height:1.65}
+  a{color:inherit;text-decoration:none}button{font:inherit}
+  :focus-visible{outline:3px solid #84cfd6;outline-offset:3px}
+  .container{max-width:1190px;margin:auto;padding:0 25px}
+  .notice{background:#19363c;color:#e9f5e5;text-align:center;font-size:13px;padding:8px 15px}
+  .nav{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:9}
+  .nav-inner{min-height:78px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+  .logo{display:flex;align-items:center;gap:11px;font-size:21px;font-weight:800}
+  .mark{width:40px;height:40px;border-radius:13px;background:var(--navy);color:var(--lime);display:grid;place-items:center;font-weight:900;font-size:24px}
+  .logo small{display:block;color:var(--muted);font-size:11px;font-weight:600;margin-top:-2px}
+  .navlinks{display:flex;gap:28px;align-items:center;font-size:14px;font-weight:650}
+  .navlinks a:hover{color:var(--accent)}
+  .btn{display:inline-flex;justify-content:center;align-items:center;gap:12px;border:1px solid transparent;padding:13px 23px;border-radius:12px;font-weight:800;cursor:pointer;transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-lime{background:var(--lime);color:var(--navy)}
+  .btn-outline{border-color:#6b8a84;color:var(--white)}
+  .btn-dark{background:var(--navy);color:var(--white)}
+  .hero{background:radial-gradient(ellipse at 80% 20%,#294d4b 0,transparent 49%),var(--navy);color:var(--white);padding:92px 0 101px;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:67px}
+  .kicker{display:inline-block;font-weight:700;font-size:12px;letter-spacing:.2px;color:#a9e9c6;border:1px solid #68877c;border-radius:50px;padding:5px 13px}
+  .hero h1{font-size:clamp(36px,4.5vw,66px);line-height:1.22;letter-spacing:-1.8px;margin:21px 0}
+  .hero h1 em{font-style:normal;color:var(--lime)}
+  .hero p{color:#d0dddb;font-size:18px;max-width:540px;margin:0 0 30px}
+  .hero-actions{display:flex;gap:11px;flex-wrap:wrap}
+  .quiet{font-size:12px!important;opacity:.88;margin-top:22px!important}
+  .window{position:relative;background:var(--white);color:var(--navy);border-radius:22px;box-shadow:20px 35px 70px #0005;overflow:hidden;transform:rotate(-2deg)}
+  .browser{background:#f2f4f2;border-bottom:1px solid #ddd;padding:12px 16px;display:flex;gap:5px;align-items:center}
+  .dot{width:9px;height:9px;border-radius:50%;background:#d0d4cb}
+  .browser span:last-child{margin-right:auto;font-size:11px;color:#68817d}
+  .dash{padding:24px}
+  .dash-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+  .dash-head b{font-size:15px}.micro{font-size:11px;background:#e6f3e1;color:#39745b;padding:4px 10px;border-radius:40px}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:17px}
+  .metric{background:#edf4f1;border-radius:13px;padding:13px 10px}.metric small{display:block;color:#61746d;font-size:10px}.metric b{font-size:19px}
+  .mock-table{width:100%;border-collapse:collapse;text-align:right;font-size:12px}.mock-table th{font-weight:700;color:#74827a}.mock-table td,.mock-table th{padding:12px 5px;border-bottom:1px solid #edf0ef}
+  .pill{padding:3px 8px;background:#dff3e8;border-radius:99px;color:#22744a;font-size:10px}
+  .pill.wait{background:#f2edd4;color:#83732b}
+  .diagram-note{position:absolute;bottom:-30px;left:35px;transform:rotate(3deg);background:var(--lime);border-radius:13px;padding:12px 18px;color:var(--navy);font-size:12px;font-weight:800;box-shadow:0 15px 30px #0004}
+  section.content{padding:86px 0}
+  .section-kicker{color:var(--accent);font-weight:800;font-size:13px}
+  h2{font-size:clamp(28px,3vw,43px);line-height:1.3;letter-spacing:-.4px;margin:13px 0}
+  .desc{max-width:590px;color:var(--muted);font-size:16px}
+  .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+  .feature{border:1px solid var(--border);background:white;border-radius:17px;padding:27px;min-height:225px}
+  .feature-icon{width:43px;height:43px;border-radius:13px;display:grid;place-items:center;background:#e5f2e9;color:var(--accent);font-size:24px}
+  h3{font-size:18px;margin:18px 0 9px}.feature p{font-size:14px;color:var(--muted);margin:0}
+  .strip{background:#e7f2e7;padding:70px 0}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:34px}
+  .step{border-top:2px solid #9ac0aa;padding-top:20px}.step b{color:var(--accent);font-size:14px}
+  .step h3{margin:8px 0}.step p{margin:0;color:#58716b;font-size:14px}
+  .security{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+  .checks{padding:0;list-style:none}
+  .checks li{display:flex;gap:11px;margin:16px 0;align-items:flex-start}
+  .checks li:before{content:'✓';display:grid;place-items:center;min-width:24px;height:24px;background:#daf0da;color:#136d4f;border-radius:8px;font-weight:900}
+  .emphasis{padding:29px;background:#e9f1eb;border-radius:18px;color:#385e51;font-weight:650}
+  .cta{padding:64px 0;background:var(--navy);color:white;text-align:center}.cta p{color:#c4d9d7;max-width:650px;margin:12px auto 26px}
+  .cta .btn{display:inline-flex}
+  footer{background:#0d2228;color:#b0c4c2;padding:29px 0;font-size:13px}.foot{display:flex;justify-content:space-between;align-items:center;gap:15px}
+  .foot a{text-decoration:underline}
+  @media(max-width:850px){.hero-grid,.security{grid-template-columns:1fr}.hero{padding:62px 0 76px}.window{max-width:520px;margin:15px auto 0}.navlinks{gap:13px}.navlinks a:not(.nav-cta){display:none}.feature-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr}}
+  @media(max-width:550px){.container{padding:0 17px}.hero h1{font-size:41px}.hero p{font-size:16px}.feature-grid{grid-template-columns:1fr}.cards{gap:6px}.metric b{font-size:17px}.window{transform:none}.diagram-note{display:none}.foot{flex-direction:column;text-align:center}.logo{font-size:17px}.nav-inner{min-height:67px}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+  </style>
+</head>
+<body>
+<div class="notice">رافدين ديجيتال للفنادق — مرحلة استقبال شراكات الفنادق، ولا توجد حجوزات ضيوف عبر هذا الموقع</div>
+<nav class="nav"><div class="container nav-inner">
+  <a class="logo" href="#home"><span class="mark">ر</span><span>رافدين ديجيتال <small>حلول تشغيل الفنادق</small></span></a>
+  <div class="navlinks"><a href="#features">المزايا</a><a href="#workflow">طريقة العمل</a><a href="#safety">حماية البيانات</a><a class="btn btn-dark nav-cta" href="#partnership">تعرّف على التعاون <span aria-hidden="true">←</span></a></div>
+</div></nav>
+<main>
+<section class="hero" id="home"><div class="container hero-grid">
+ <div><span class="kicker">نظام إداري للفنادق والمنشآت الفندقية</span>
+  <h1>كل غرف فندقك،<br><em>بإدارة أوضح.</em></h1>
+  <p>خفف فوضى الدفاتر والحجوزات المتكررة. مع رافدين ديجيتال، بيانات غرفك وأسعارك وحجوزاتك تصير بنظام واحد مصمم لخدمة فريق الاستقبال.</p>
+  <div class="hero-actions"><a class="btn btn-lime" href="#features">شوف شنو يقدم النظام <span aria-hidden="true">↙</span></a><a class="btn btn-outline" href="#partnership">التعاون مع فندقك</a></div>
+  <p class="quiet">النظام الإداري مبني ويعمل داخلياً. تفعيل الفنادق عن بُعد يتطلب استكمال الاستضافة والتعاقد.</p>
+ </div>
+ <div class="window" role="img" aria-label="رسم توضيحي للوحة إدارة غرف وحجوزات فندق وليس بيانات فندق حقيقي">
+  <div class="browser"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span>معاينة شكل لوحة الإدارة • مثال توضيحي فقط</span></div>
+  <div class="dash">
+   <div class="dash-head"><b>لوحة إدارة الفندق</b><span class="micro">واجهة عربية</span></div>
+   <div class="cards"><div class="metric"><small>أنواع الإدارة</small><b>الغرف</b></div><div class="metric"><small>الجدولة</small><b>الحجوزات</b></div><div class="metric"><small>سجل العمليات</small><b>التقارير</b></div></div>
+   <table class="mock-table" aria-hidden="true"><thead><tr><th>المهمة</th><th>الإجراء</th><th>الحالة</th></tr></thead><tbody>
+    <tr><td>إدارة الغرف</td><td>سعة وسعر الغرفة</td><td><span class="pill">متاح</span></td></tr>
+    <tr><td>إضافة حجز</td><td>فحص التعارض</td><td><span class="pill">متاح</span></td></tr>
+    <tr><td>حجز الزيارات</td><td>إتمام عبر موظف</td><td><span class="pill wait">مراجعة</span></td></tr>
+    <tr><td>مراجعة البيانات</td><td>سجلات مستقلة</td><td><span class="pill">متاح</span></td></tr>
+   </tbody></table>
+  </div>
+  <div class="diagram-note">تصور للواجهة — ليست بيانات عميل حقيقي</div>
+ </div>
+</div></section>
+<section class="content" id="features"><div class="container">
+ <span class="section-kicker">01 / إدارة أسهل للفندق</span>
+ <h2>أدوات أساسية تساعد الاستقبال<br>يدير يومه بدقة.</h2>
+ <p class="desc">نبدأ من الأشياء التي يحتاجها الفندق فعلاً، بدل إغراق فريق العمل بأدوات يصعب استخدامها.</p>
+ <div class="feature-grid">
+  <article class="feature"><span class="feature-icon">▦</span><h3>سجل الغرف</h3><p>إضافة الغرف بأرقامها وأنواعها وسعة كل غرفة، مع السعر والعملة المعتمدة لدى الفندق.</p></article>
+  <article class="feature"><span class="feature-icon">▤</span><h3>تسجيل الحجوزات</h3><p>إدخال اسم الضيف وتاريخ الوصول والمغادرة والتكلفة من داخل لوحة موظف الفندق المخوّل.</p></article>
+  <article class="feature"><span class="feature-icon">◎</span><h3>حماية من الحجز المزدوج</h3><p>التحقق من عدم تداخل حجوزات الغرفة نفسها قبل تأكيد أي حجز جديد.</p></article>
+  <article class="feature"><span class="feature-icon">↗</span><h3>الوصول والمغادرة</h3><p>تحديث حالة الحجز من مؤكد إلى وصول ثم مغادرة، مع دعم الإلغاء وفق الحالة.</p></article>
+  <article class="feature"><span class="feature-icon">▥</span><h3>ملفات وتقارير</h3><p>عرض سجل حجوزات الفندق وتصدير المعلومات بتنسيق CSV لمتابعة العمل داخلياً.</p></article>
+  <article class="feature"><span class="feature-icon">♙</span><h3>حساب مستقل</h3><p>تخصيص حساب الفندق مع التحقق من الصلاحيات وفصل بياناته عن بيانات المنشآت الأخرى.</p></article>
+ </div>
+</div></section>
+<section class="strip" id="workflow"><div class="container">
+ <span class="section-kicker">02 / مراحل التعاون</span><h2>نبدأ مع فندقك خطوة خطوة.</h2>
+ <div class="steps">
+ <div class="step"><b>01 / معرفة الاحتياج</b><h3>نفهم آلية استقبال الفندق</h3><p>عدد الغرف، أصنافها، نظام المناوبات، وطريقة تسجيل الحجوزات المتبعة.</p></div>
+ <div class="step"><b>02 / ضبط البيانات</b><h3>نجهّز سجل الفندق</h3><p>ينشئ مسؤول الفندق الغرف وأسعارها ويتحقق من صحة البيانات قبل استخدامها.</p></div>
+ <div class="step"><b>03 / التجهيز والتشغيل</b><h3>نراجع ونفعّل الخدمة</h3><p>نحدد الصلاحيات والدعم الفني ونختبر الوصول والحجوزات قبل التفعيل على الاستضافة المخصصة.</p></div>
+ </div>
+</div></section>
+<section class="content" id="safety"><div class="container security">
+ <div><span class="section-kicker">03 / أساس المشروع</span><h2>بيانات الفندق مسؤولية،<br>مو مجرد شاشة.</h2><p class="desc">التفعيل الحقيقي يعتمد على فصل حسابات المنشآت، وضبط صلاحيات الموظفين، والتأكد من مصدر معلومات الغرف، وسياسة خاصة لبيانات النزلاء.</p>
+ <ul class="checks"><li>حسابات مستقلة وعدم عرض حجوزات فندق لفندق آخر</li><li>فحص تعارض المواعيد قبل تسجيل الحجز</li><li>مراجعة بشرية للحجوزات بدلاً من تأكيدها آلياً للضيوف</li><li>لا يوجد تحصيل بطاقات أو مدفوعات عبر الموقع التعريفي</li></ul></div>
+ <aside class="emphasis"><h3>تنويه مهم للفنادق</h3><p>هذا الموقع مخصص لعرض النظام للشركاء التجاريين، وليس منصة لحجز إقامة المسافرين. خدمة الفنادق عن بُعد ستفتح بعد تجهيز الاستضافة الآمنة واتفاق معالجة بيانات مع المنشأة. لا تدخل أي معلومات لنزلاء حقيقيين في هذا الموقع.</p></aside>
+</div></section>
+<section class="cta" id="partnership"><div class="container">
+ <span class="kicker">04 / شراكات الفنادق</span><h2>عندك فندق وتريد نظام إدارة مرتب؟</h2>
+ <p>نقدّم المشروع باسم رافدين ديجيتال. يتحدد نطاق التفعيل والدعم والسعر بعد معرفة احتياجات فندقك. قناة استقبال طلبات التعاقد العامة لم تُفعّل بعد؛ لا توجد استمارة تجمع بياناتك هنا.</p>
+ <a href="#features" class="btn btn-lime">راجع مزايا النظام</a>
+ </div></section>
+</main>
+<footer><div class="container foot"><div><b>رافدين ديجيتال</b> — نظام إدارة الفنادق © 2026</div><div>لا تمثّل الصفحة أي فندق بعينه ولا تؤكد حجوزات أو مدفوعات.</div></div></footer>
+</body>
+</html>
