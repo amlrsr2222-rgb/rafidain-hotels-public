@@ -9,4 +9,4 @@ Static Arabic landing site for a hotel-management SaaS project. This repository 
 - Render Static Site deployment is for the marketing frontend alone. Backend with protected hotel data will require durable production DB, legal privacy notices and secure hosting.
 - There are no fake hotel names, references, testimonials, or actual customers.
 
-Render settings: branch main, build command `echo static-ready`, publish directory `public`.
+Render settings: branch main, build command `echo static-ready`, publish directory `docs`.
