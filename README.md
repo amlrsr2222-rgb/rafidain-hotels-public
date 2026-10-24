@@ -10,3 +10,14 @@ Static Arabic landing site for a hotel-management SaaS project. This repository 
 - There are no fake hotel names, references, testimonials, or actual customers.
 
 Render settings: branch main, build command `echo static-ready`, publish directory `docs`.
+
+
+## Published sites directory
+- Main verified directory: https://amlrsr2222-rgb.github.io/rafidain-hotels-public/sites/
+- Hotel information page: https://amlrsr2222-rgb.github.io/rafidain-hotels-public/
+- Ad design services: https://amlrsr2222-rgb.github.io/rafidain-hotels-public/ads/
+- Directory also provides links to externally deployed Vercel demo sites.
+
+The directory contains public URLs and high-level descriptions ONLY. It never embeds
+business leads, customer records, deployment credentials or local service endpoints.
+Vercel demo pages do NOT imply backend payment, booking or customer processing is live.
